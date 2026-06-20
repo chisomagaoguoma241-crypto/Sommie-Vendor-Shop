@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Sommie Vendor Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="admin-header"><div class="admin-header-container"><div class="admin-logo"><i class="fas fa-crown"></i>Admin Panel</div><button class="user-btn" onclick="toggleUserMenu()"><i class="fas fa-user-circle"></i>Admin</button></div></header>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <nav class="admin-nav">
+                <a href="#dashboard" class="nav-item active" onclick="switchAdminTab('dashboard')"><i class="fas fa-chart-line"></i>Dashboard</a>
+                <a href="#products" class="nav-item" onclick="switchAdminTab('products')"><i class="fas fa-box"></i>Products</a>
+                <a href="#orders" class="nav-item" onclick="switchAdminTab('orders')"><i class="fas fa-shopping-bag"></i>Orders</a>
+                <a href="#users" class="nav-item" onclick="switchAdminTab('users')"><i class="fas fa-users"></i>Users</a>
+                <a href="#settings" class="nav-item" onclick="switchAdminTab('settings')"><i class="fas fa-cog"></i>Settings</a>
+            </nav>
+        </aside>
+        <main class="admin-content">
+            <section id="dashboard" class="admin-tab active"><h1>Dashboard</h1><div class="stats-grid"><div class="stat-card"><h3>Total Users</h3><p class="stat-value" id="totalUsers">0</p></div><div class="stat-card"><h3>Total Orders</h3><p class="stat-value" id="totalOrders">0</p></div><div class="stat-card"><h3>Total Products</h3><p class="stat-value" id="totalProducts">0</p></div><div class="stat-card"><h3>Revenue</h3><p class="stat-value" id="totalRevenue">₦0</p></div></div></section>
+            <section id="products" class="admin-tab"><h1>Products</h1><table class="admin-table"><tr><th>Name</th><th>Price</th><th>Stock</th></tr></table></section>
+            <section id="orders" class="admin-tab"><h1>Orders</h1><table class="admin-table"><tr><th>Order ID</th><th>Customer</th><th>Total</th></tr></table></section>
+            <section id="users" class="admin-tab"><h1>Users</h1><table class="admin-table"><tr><th>Name</th><th>Email</th><th>Phone</th></tr></table></section>
+            <section id="settings" class="admin-tab"><h1>Settings</h1><form><input type="text" value="Sommie Vendor Shop" placeholder="Store Name"><input type="text" value="+234 700 000 0000" placeholder="Phone"><button type="submit" class="btn btn-primary">Save</button></form></section>
+        </main>
+    </div>
+    <div id="notificationContainer" class="notification-container"></div>
+    <script src="js/app.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

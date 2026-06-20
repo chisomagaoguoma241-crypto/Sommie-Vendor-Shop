@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Sommie Vendor Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar"><div class="navbar-container"><div class="navbar-logo"><a href="index.html"><i class="fas fa-shopping-bag"></i><span>Sommie Vendor Shop</span></a></div></div></nav>
+
+    <div class="container checkout-container">
+        <h1 class="page-title">Checkout</h1>
+        <div class="checkout-content">
+            <form class="checkout-form">
+                <div class="checkout-section"><h2><span class="step-number">1</span>Customer Details</h2>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone" required>
+                </div>
+                <div class="checkout-section"><h2><span class="step-number">2</span>Shipping Address</h2>
+                    <input type="text" placeholder="Street Address" required>
+                    <input type="text" placeholder="City" required>
+                    <input type="text" placeholder="State" required>
+                </div>
+                <div class="checkout-section"><h2><span class="step-number">3</span>Payment Method</h2>
+                    <label class="payment-option"><input type="radio" name="payment" value="bank" required><span>Bank Transfer</span></label>
+                    <label class="payment-option"><input type="radio" name="payment" value="card"><span>Card Payment</span></label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Place Order</button>
+            </form>
+            <aside class="order-summary"><h2>Order Summary</h2><div class="summary-row"><span>Total:</span><span id="summaryTotal">₦0</span></div></aside>
+        </div>
+    </div>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 Sommie Vendor Shop</p></div></div></footer>
+    <div id="notificationContainer" class="notification-container"></div>
+    <script src="js/app.js"></script>
+</body>
+</html>

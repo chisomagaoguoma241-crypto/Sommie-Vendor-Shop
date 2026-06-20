@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Sommie Vendor Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo"><a href="index.html"><i class="fas fa-shopping-bag"></i><span>Sommie Vendor Shop</span></a></div>
+            <div class="navbar-icons">
+                <button class="icon-btn dark-mode-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="icon-btn"><i class="fas fa-user"></i></a>
+                <a href="cart.html" class="icon-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count" id="cartCount">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container product-details-container">
+        <div class="product-images"><div class="main-image"><img id="mainImage" src="https://via.placeholder.com/500x500" alt="Product"></div></div>
+        <div class="product-info">
+            <h1 id="productName">Product Name</h1>
+            <div class="product-pricing"><span class="discount-price" id="discountPrice">₦0</span></div>
+            <p id="productDescription">Product description</p>
+            <div class="quantity-selector"><label>Quantity:</label><div class="quantity-control"><button onclick="decreaseQuantity()">-</button><input type="number" id="quantityInput" value="1" min="1"><button onclick="increaseQuantity()">+</button></div></div>
+            <div class="product-actions">
+                <button class="btn btn-primary btn-lg" onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <button class="btn btn-outline" onclick="addToWishlist()"><i class="fas fa-heart"></i> Wishlist</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 Sommie Vendor Shop. Your Safety is Our Priority</p></div></div>
+    </footer>
+    <div id="notificationContainer" class="notification-container"></div>
+    <script src="js/app.js"></script>
+</body>
+</html>

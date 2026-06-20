@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt - Sommie Vendor Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar"><div class="navbar-container"><div class="navbar-logo"><a href="index.html"><i class="fas fa-shopping-bag"></i><span>Sommie Vendor Shop</span></a></div></div></nav>
+
+    <div class="container receipt-container">
+        <div class="receipt-card">
+            <div class="receipt-header"><i class="fas fa-shopping-bag"></i><h1>Sommie Vendor Shop</h1><p>Your Safety is Our Priority</p></div>
+            <div class="receipt-success"><i class="fas fa-check-circle"></i><h2>Order Placed Successfully!</h2></div>
+            <div class="receipt-details">
+                <div class="detail-row"><span>Receipt #:</span><span id="receiptNumber">SVS-2026-001</span></div>
+                <div class="detail-row"><span>Order ID:</span><span id="orderId">ORD-2026-001</span></div>
+                <div class="detail-row"><span>Date:</span><span id="dateTime">01-Jan-2026</span></div>
+            </div>
+            <table class="receipt-table"><tbody id="receiptItems"></tbody></table>
+            <div class="receipt-summary"><div class="summary-row total"><span>Total:</span><span id="receiptTotal">₦0</span></div></div>
+        </div>
+        <div class="receipt-actions">
+            <button class="btn btn-primary" onclick="printReceipt()">Print</button>
+            <a href="index.html" class="btn btn-outline">Back Home</a>
+        </div>
+    </div>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 Sommie Vendor Shop</p></div></div></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
